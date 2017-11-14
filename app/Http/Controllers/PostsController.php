@@ -40,14 +40,14 @@ class PostsController extends Controller
 
     public function store()
     {
-
+    
         $this->validate(request(), [
 
             'body' => 'required'
         ]);
 
         auth()->user()->publish(
-            new Post(request(['body']))
+            new Post(request(['body','emotion']))
         );
 
 

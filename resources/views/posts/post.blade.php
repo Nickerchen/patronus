@@ -11,5 +11,6 @@
     </p>
 
     {{$post->body}}
+    {{$post->emotion}}
 
 </div><!-- /.blog-post -->
