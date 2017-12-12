@@ -11,6 +11,13 @@
     </p>
 
     {{$post->body}}
-    {{$post->emotion}}
+    @if($post->emotion == -1)
+      <img height="22" width="22" src="{{ asset('img/sad.png') }}" alt="sad" />
+    @elseif($post->emotion == 0)
+      <img height="22" width="22" src="{{ asset('img/neutral.png') }}" alt="neutral" />
+    @elseif($post->emotion == 1)
+      <img height="22" width="22" src="{{ asset('img/happy.png') }}" alt="happy" />
+    @endif
+
 
 </div><!-- /.blog-post -->
