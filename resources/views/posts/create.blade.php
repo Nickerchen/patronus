@@ -13,8 +13,8 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
-                                <textarea class="form-control" name="body" rows="15" placeholder="...schreiben Sie einfach in dieses Feld" required>{{ old('body') }}</textarea>
-
+                                <textarea class="form-control" name="body" rows="5" placeholder="...schreiben Sie einfach in dieses Feld" required>{{ old('body') }}</textarea>
+                                <p></p>
                                 <div class="form-group" id="emojis">
                                   <input type="radio" name="emotion" id="happy" value=1 />
                                   <label for="happy"><img height="42" width="42" src="{{ asset('img/happy.png') }}" alt="I'm happy" /></label>
