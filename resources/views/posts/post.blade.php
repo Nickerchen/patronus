@@ -8,7 +8,7 @@
     <p class="blog-post-meta">
         {{ $post->user->name}} am
         {{ $post->created_at->toFormattedDateString() }}
-        <a href="{{ route('post.delete', ['post_id'=> $post->id]) }}">delete post</a>
+        <a href="{{ route('post.delete', ['post_id'=> $post->id]) }}">Notiz löschen</a>
     </p>
 
     {{$post->body}}
