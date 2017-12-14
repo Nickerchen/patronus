@@ -6,8 +6,9 @@
     </h2>
 
     <p class="blog-post-meta">
-        {{ $post->user->name}} on
+        {{ $post->user->name}} am
         {{ $post->created_at->toFormattedDateString() }}
+        <a href="{{ route('post.delete', ['post_id'=> $post->id]) }}">delete post</a>
     </p>
 
     {{$post->body}}

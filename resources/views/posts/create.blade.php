@@ -6,14 +6,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">How do you feel?</div>
+                    <div class="panel-heading">Wie fühlst du dich im Moment?</div>
                     <div class="panel-body">
 
                         <form action="{{ url('create') }}" method="POST" class="form" role="form">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
-                                <textarea class="form-control" name="body" rows="15" placeholder="...feel free to type here" required>{{ old('body') }}</textarea>
+                                <textarea class="form-control" name="body" rows="15" placeholder="...schreiben Sie einfach in dieses Feld" required>{{ old('body') }}</textarea>
 
                                 <div class="form-group" id="emojis">
                                   <input type="radio" name="emotion" id="happy" value=1 />
@@ -30,7 +30,7 @@
                                 @endif
                             </div>
 
-                            <button class="btn btn-primary pull-right">Save</button>
+                            <button class="btn btn-primary pull-right">Speichern</button>
 
                             </form>
                     </div>

@@ -40,7 +40,7 @@ class PostsController extends Controller
 
     public function store()
     {
-    
+
         $this->validate(request(), [
 
             'body' => 'required'
@@ -52,5 +52,15 @@ class PostsController extends Controller
 
 
         return redirect('/');
+    }
+
+    public function destroy($post_id)
+    {
+    $posts = Post::where('id', $post_id)->first();
+    if (Auth::user() != $posts->user){
+        return redirect()->back();
+    }
+    $posts->delete();
+    return redirect('/');
     }
 }

@@ -29,3 +29,7 @@ Route::get('/about', function() {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/delete-post/{post_id}', [
+    'uses' => 'PostsController@destroy' ,
+    'as' => 'post.delete'
+]);
