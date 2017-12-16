@@ -36,5 +36,5 @@ Route::get('/delete-post/{post_id}', [
 ]);
 
 Route::post('/2fa', function () {
-    return redirect('/');
+    return redirect('/home');
 })->name('2fa')->middleware('2fa');
