@@ -47,6 +47,7 @@ class User extends Authenticatable
        $this->attributes['google2fa_secret'] = encrypt($value);
   }
 
+
   /**
    * Decrypt the user's google_2fa secret.
    *
