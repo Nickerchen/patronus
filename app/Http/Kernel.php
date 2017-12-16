@@ -26,6 +26,8 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
+
+  
     protected $middlewareGroups = [
         'web' => [
             \App\Http\Middleware\EncryptCookies::class,
@@ -57,5 +59,6 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        '2fa' => \PragmaRX\Google2FALaravel\Middleware::class,
     ];
 }

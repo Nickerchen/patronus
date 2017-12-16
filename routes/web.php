@@ -20,6 +20,7 @@ Route::get('/', 'PostsController@index');
 Route::get('create', 'PostsController@create');
 
 Route::post('create', 'PostsController@store');
+Route::get('/complete-registration', 'Auth\RegisterController@completeRegistration');
 
 
 Route::get('/about', function() {
@@ -33,3 +34,7 @@ Route::get('/delete-post/{post_id}', [
     'uses' => 'PostsController@destroy' ,
     'as' => 'post.delete'
 ]);
+
+Route::post('/2fa', function () {
+    return redirect(URL()->previous());
+})->name('2fa')->middleware('2fa');
