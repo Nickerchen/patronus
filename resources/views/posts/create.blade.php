@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Wie fühlen Sie sich im Moment?</div>
+                    <div class="panel-heading">Wie fühlst du dich im Moment?</div>
                     <div class="panel-body">
 
                         <form action="{{ url('create') }}" method="POST" class="form" role="form">
