@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    
+
                         @if (!Auth::check())
 
                         <p>Willkommen auf Patronus.</p>
