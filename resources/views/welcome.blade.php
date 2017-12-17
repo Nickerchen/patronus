@@ -13,19 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                        @if (Auth::check())
-
-                        @if ($posts->isEmpty()) <p>Klicken Sie auf "Neue Notiz" um zu beginnen</p> 
-                        @endif
-
-
-                        @foreach ($posts as $post)
-                            @include ('posts.post')
-                        @endforeach
-
-                        @endif
-
+                    
                         @if (!Auth::check())
 
                         <p>Willkommen auf Patronus.</p>

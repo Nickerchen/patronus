@@ -9,8 +9,10 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth', '2fa']); //->except(['index', 'show']);
+        $this->middleware(['auth', '2fa'])->except(['index', 'show']);
     }
+
+
 
     public function index()
     {
@@ -19,12 +21,13 @@ class PostsController extends Controller
         if(Auth::user()) {
 
             $posts = $me->posts()->orderBy('created_at', 'desc')->get();
+            return view('home', compact('posts'));
         }
       //  $posts = $me->where('id', $me->id)->with(['posts' => function ($query) {
         //    $query->orderBy('created_at', 'desc');
        // }])->get();
 
-        return view('welcome', compact('posts'));
+        return view('welcome');
     }
 
 
