@@ -3,14 +3,14 @@
 @section('content')
 <div class="container spark-screen">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">2FA Secret Key</div>
+                <div class="panel-heading">2F-Authentifizierung</div>
 
                 <div class="panel-body">
-                    2FA has been removed
+                    2-Fach-Authentifizierung wurde entfernt.
                     <br /><br />
-                    <a href="{{ url('/home') }}">Go Home</a>
+                    <a href="/home"><button class="btn btn-primary">Startseite</button></a>
                 </div>
             </div>
         </div>
