@@ -9,7 +9,7 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth', '2fa'])->except(['index', 'show']);
+        $this->middleware(['auth'])->except(['index', 'show']);
     }
 
 
@@ -54,7 +54,7 @@ class PostsController extends Controller
         );
 
 
-        return redirect('/');
+        return redirect('/home');
     }
 
     public function destroy($post_id)
@@ -64,6 +64,6 @@ class PostsController extends Controller
         return redirect()->back();
     }
     $posts->delete();
-    return redirect('/');
+    return redirect('/home');
     }
 }
