@@ -21,6 +21,11 @@ Route::get('create', 'PostsController@create');
 
 Route::post('create', 'PostsController@store');
 
+Route::get('/2fa/enable', 'Google2FAController@enableTwoFactor');
+Route::get('/2fa/disable', 'Google2FAController@disableTwoFactor');
+Route::get('/2fa/validate', 'Auth\LoginController@getValidateToken');
+Route::post('/2fa/validate', ['middleware' => 'throttle:5', 'uses' => 'Auth\LoginController@postValidateToken']);
+
 
 
 Route::get('/about', function() {
