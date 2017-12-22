@@ -9,10 +9,15 @@
 
                 <div class="panel-body">
 
-    <h1>Impressum</h1> <h2>Angaben gem&auml;&szlig; &sect; 5 TMG:</h2> <p>James Friesen<br />
+    <h1>Impressum</h1> <h2>Angaben gem&auml;&szlig; &sect; 5 TMG:</h2> <br><div class="row"><div class="col-sm-6"><p>James Friesen<br />
 
-    Brunnentalweg 4<br /> 78647 Trossingen</p> <h2>Kontakt:</h2> <p>Telefon: +15771712070<br /> E-
-    Mail: jfriesen@hm.edu</p> <h2>Haftung f&uuml;r Inhalte</h2> <p>Als Diensteanbieter sind wir
+    Brunnentalweg 4<br /> 78647 Trossingen</p> <h3>Kontakt:</h3> <p>Telefon: +15771712070<br /> E-
+    Mail: jfriesen@hm.edu</p></div>
+    <div class="col-sm-6">
+    <p>Felix Schlicht<br />
+
+    Inselstrasse 12<br />59494 Soest</p> <h3>Kontakt:</h3> <p>Telefon: +15758807650<br /> E-
+    Mail: fschlich@hm.edu</p></div></div><h2>Haftung f&uuml;r Inhalte</h2> <p>Als Diensteanbieter sind wir
 
     gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen
     Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
