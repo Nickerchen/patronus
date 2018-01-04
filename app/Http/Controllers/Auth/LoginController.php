@@ -25,6 +25,8 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+    public $maxAttempts = 3;
+    public $decayMinutes = 10;
 
     /**
      * Where to redirect users after login.
@@ -32,6 +34,7 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+
 
     /**
      * Send the post-authentication response.
@@ -85,6 +88,19 @@ class LoginController extends Controller
 
         return redirect()->intended($this->redirectTo);
     }
+
+    /**
+    * Determine if the user has too many failed login attempts.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @return bool
+    */
+   // protected function hasTooManyLoginAttempts(Request $request)
+   // {
+   //     return $this->limiter()->tooManyAttempts(
+   //         $this->throttleKey($request), 3, 30
+   //     );
+   // }
 
     /**
      * Create a new controller instance.
